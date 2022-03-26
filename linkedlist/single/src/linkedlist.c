@@ -13,10 +13,10 @@ Node_t *new_node(int n) {
     return node;
 }
 
-// return address of new head
+
 Node_t *insert_top(Node_t *head, Node_t *node) {
     node->next = head;
-    return node;
+    return node; // return address of new head
 }
 
 void insert_bottom(Node_t *head, Node_t *node) {
@@ -25,6 +25,19 @@ void insert_bottom(Node_t *head, Node_t *node) {
         current = current->next;
     }
     current->next = node;
+}
+
+void insert_before(Node_t *predecessor, Node_t *node_to_insert) {
+    node_to_insert->next = predecessor->next;
+    predecessor->next = node_to_insert;
+}
+
+Node_t *get_predecessor_of(Node_t *head, int value) {
+    Node_t *current = head;
+    while(current->next->value != value) {
+        current = current->next;
+    }
+    return current;
 }
 
 int free_memory(Node_t *head) {
@@ -49,25 +62,18 @@ void printlist(Node_t *head) {
 int main() {
 
     Node_t *head = NULL; 
-    Node_t *tmp = NULL;
 
-    tmp = new_node(33);
-    head = insert_top(head, tmp);
+    head = insert_top(head, new_node(33));
+    head = insert_top(head, new_node(32));
+    head = insert_top(head, new_node(42));
 
-    tmp = new_node(32);
-    head = insert_top(head, tmp);
+    insert_bottom(head, new_node(23));
+    insert_bottom(head, new_node(24));
 
-    tmp = new_node(42);
-    head = insert_top(head, tmp);
-
-    tmp = new_node(33);
-    insert_bottom(head, tmp);
-
-    tmp = new_node(23);
-    insert_bottom(head, tmp);
-
-    tmp = new_node(24);
-    insert_bottom(head, tmp);
+    Node_t *predecessor = get_predecessor_of(head, 23);
+    insert_before(predecessor, new_node(99));
+    predecessor = get_predecessor_of(head, 99);
+    insert_before(predecessor, new_node(101));
     
     printlist(head);
 

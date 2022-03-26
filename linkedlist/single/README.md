@@ -28,7 +28,8 @@ Each element in the linked list will be represented as a **Node struct** that co
 2. Insert 
    1. a new node to the top of the list
    2. a new node at the bottom of the list
-   3. a new node at a certain position of the list
+   3. a new node before a certain position of the list
+   4. a new node after a certain position of the list
 3. Print all elements of the linked-list
 4. Delete
    1. the last node in the list
@@ -68,7 +69,7 @@ flowchart LR
 	11 --> NULL
 ```
 
-## 2.2 Insertion at the bottom
+### 2.2 Insertion at the bottom
 
 We parse all next values from the list until we reach NULL and then we affect the value of the last next element to the address of the new node
 
@@ -92,6 +93,47 @@ flowchart LR
 	classDef someclass fill:#5239ac;
 ```
 
+### 2.3 Insertion before a certain position
+
+First we must get the address of the predecessor of the node where we want to make insertion. Then we assign the next pointer value of the new node to the next pointer value of the predecessor. Finally the next pointer from predecessor point to the address of the new node. 
+
+```mermaid
+flowchart LR
+	99 --> NULL
+```
+
+```mermaid
+flowchart LR
+	42 --> 11
+	11:::active --> 24
+	24 --> NULL
+	classDef someclass fill:#169b1f;
+	classDef active fill:#c82626;
+	
+```
+
+
+
+```mermaid
+flowchart LR
+	42 --> 11
+	11:::active --> 24
+	24:::someclass --> NULL
+	99 --> 24
+	classDef someclass fill:#169b1f;
+	classDef active fill:#c82626;
+```
+
+```mermaid
+flowchart LR
+	42 --> 11
+	11:::active --> 99
+	24:::someclass --> NULL
+	99 --> 24
+	classDef someclass fill:#169b1f;
+	classDef active fill:#c82626;
+```
+
 
 
 ## Implemented
@@ -99,8 +141,9 @@ flowchart LR
 - [x] Create the head of the list
 - [ ] Insert
   - [x] a new node to the top of the list
-  - [ ] a new node at the bottom of the list
-  - [ ] a new node at a certain position of the list
+  - [x] a new node at the bottom of the list
+  - [ ] a new node before a certain position of the list
+  - [ ] a new node after a certain position of the list
 - [x] Print all elements of the linked-list
 - [ ] Delete
   - [ ] the last node in the list
