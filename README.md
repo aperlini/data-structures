@@ -1,5 +1,5 @@
-# data-structures
-A Collection of data structures implemented in different languages for learning purposes
+# Data-structures
+Data structures implemention in different languages for learning purposes
 
 ## Todo list
 
