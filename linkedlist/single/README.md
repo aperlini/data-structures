@@ -95,7 +95,7 @@ flowchart LR
 
 ### 2.3 Insertion before a certain position
 
-First we must get the address of the predecessor of the node where we want to make insertion. Then we assign the next pointer value of the new node to the next pointer value of the predecessor. Finally the next pointer from predecessor point to the address of the new node. 
+We want to insert node 99 before node 24.
 
 ```mermaid
 flowchart LR
@@ -112,7 +112,7 @@ flowchart LR
 	
 ```
 
-
+First we must get the address of the <span style="color:#c82626">predecessor (11)</span> of the <span style="color:#169b1f">node (24)</span> where we want to make insertion. 
 
 ```mermaid
 flowchart LR
@@ -124,6 +124,8 @@ flowchart LR
 	classDef active fill:#c82626;
 ```
 
+Then we assign the next pointer value of the new node (99) to the <span style="color:#c82626">next pointer value of the predecessor (11)</span>. 
+
 ```mermaid
 flowchart LR
 	42 --> 11
@@ -134,16 +136,65 @@ flowchart LR
 	classDef active fill:#c82626;
 ```
 
+Finally the <span style="color:#c82626">next pointer from predecessor (11)</span> points to the address of the new node (99). 
 
+### 2.4 Insertion after a certain position
+
+We want to insert node 101 after node 99
+
+```mermaid
+flowchart LR
+	101 --> NULL
+```
+
+```mermaid
+flowchart LR
+	42 --> 11
+	11:::active --> 99
+	24:::someclass --> NULL
+	99:::current --> 24
+	classDef current fill:#169b1f;
+	classDef next fill:#c82626;
+```
+
+First we get the address of the <span style="color:#169b1f">node 99</span> where we want to make insertion after. 
+
+```mermaid
+flowchart LR
+	42 --> 11
+	11:::active --> 99
+	24:::next --> NULL
+	99:::current --> 24
+	101 --> 24
+	classDef current fill:#169b1f;
+	classDef next fill:#c82626;
+```
+
+Then we assign the <span style="color:#c82626">next pointer</span> value of the <span style="color:#169b1f">node 99 </span>to the next pointer value of the new node 101. 
+
+```mermaid
+flowchart LR
+	42 --> 11
+	11:::active --> 99
+	24:::next --> NULL
+	99:::current --> 101
+	101 --> 24
+	classDef current fill:#169b1f;
+	classDef next fill:#c82626;
+```
+
+
+
+Finally the <span style="color:#169b1f">next pointer of the node 99</span> needs to point to the address of the new node 101. 
 
 ## Implemented
 
 - [x] Create the head of the list
-- [ ] Insert
+- [x] Insert
   - [x] a new node to the top of the list
   - [x] a new node at the bottom of the list
-  - [ ] a new node before a certain position of the list
-  - [ ] a new node after a certain position of the list
+  - [x] a new node before a certain position of the list
+  - [x] a new node after a certain position of the list
 - [x] Print all elements of the linked-list
 - [ ] Delete
   - [ ] the last node in the list
