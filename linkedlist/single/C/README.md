@@ -1,6 +1,6 @@
 ## Usage
 
-To create the executable file *./bin/main* : 
+To create the executable file *./bin/linkedlist* : 
 
 ```bash
 make
