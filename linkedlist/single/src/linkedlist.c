@@ -13,9 +13,18 @@ Node_t *new_node(int n) {
     return node;
 }
 
-Node_t *insert_to_top(Node_t *head, Node_t *to_insert) {
-    to_insert->next = head;
-    return to_insert;
+// return address of new head
+Node_t *insert_top(Node_t *head, Node_t *node) {
+    node->next = head;
+    return node;
+}
+
+void insert_bottom(Node_t *head, Node_t *node) {
+    Node_t *current = head;
+    while(current->next != NULL) {
+        current = current->next;
+    }
+    current->next = node;
 }
 
 int free_memory(Node_t *head) {
@@ -43,13 +52,22 @@ int main() {
     Node_t *tmp = NULL;
 
     tmp = new_node(33);
-    head = insert_to_top(head, tmp);
+    head = insert_top(head, tmp);
 
     tmp = new_node(32);
-    head = insert_to_top(head, tmp);
+    head = insert_top(head, tmp);
 
     tmp = new_node(42);
-    head = insert_to_top(head, tmp);
+    head = insert_top(head, tmp);
+
+    tmp = new_node(33);
+    insert_bottom(head, tmp);
+
+    tmp = new_node(23);
+    insert_bottom(head, tmp);
+
+    tmp = new_node(24);
+    insert_bottom(head, tmp);
     
     printlist(head);
 

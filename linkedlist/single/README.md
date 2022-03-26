@@ -26,7 +26,7 @@ Each element in the linked list will be represented as a **Node struct** that co
 
 1. Create the head of the list
 2. Insert 
-   1. a new node at the front of the list
+   1. a new node to the top of the list
    2. a new node at the bottom of the list
    3. a new node at a certain position of the list
 3. Print all elements of the linked-list
@@ -46,7 +46,7 @@ flowchart LR
 	head 
 ```
 
-### 2. 1 Insertion at the top of the linked list
+### 2. 1 Insertion at the top 
 
 1. We create a new *node* and define it as the head
 
@@ -68,14 +68,40 @@ flowchart LR
 	11 --> NULL
 ```
 
+## 2.2 Insertion at the bottom
+
+We parse all next values from the list until we reach NULL and then we affect the value of the last next element to the address of the new node
+
+```mermaid
+flowchart LR
+	24 --> NULL
+```
+
+```mermaid
+flowchart LR
+	42:::someclass --> 11
+	11:::someclass --> NULL
+	classDef someclass fill:#5239ac;
+```
+
+```mermaid
+flowchart LR
+	42:::someclass --> 11
+	11:::someclass --> 24
+	24 --> NULL
+	classDef someclass fill:#5239ac;
+```
+
+
+
 ## Implemented
 
-- [ ] Create the head of the list
+- [x] Create the head of the list
 - [ ] Insert
-  - [ ] a new node at the front of the list
+  - [x] a new node to the top of the list
   - [ ] a new node at the bottom of the list
   - [ ] a new node at a certain position of the list
-- [ ] Print all elements of the linked-list
+- [x] Print all elements of the linked-list
 - [ ] Delete
   - [ ] the last node in the list
   - [ ] the first node in the list
