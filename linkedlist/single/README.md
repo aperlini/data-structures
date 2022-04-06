@@ -197,8 +197,8 @@ Finally the <span style="color:#169b1f">next pointer of the node 99</span> needs
   - [x] a new node after a certain position of the list
 - [x] Print all elements of the linked-list
 - [ ] Delete
-  - [ ] the last node in the list
-  - [ ] the first node in the list
+  - [x] the last node in the list
+  - [x] the first node in the list
   - [ ] the node at a certain position of the list
 
 ## Code implementations

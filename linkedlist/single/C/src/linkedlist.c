@@ -56,6 +56,12 @@ void delete_last_node(Node_t *head) {
     free(current->next);
 }
 
+Node_t *delete_first_node(Node_t *head) {
+    Node_t *new_head = head->next;
+    free(head);
+    return new_head;
+}
+
 int free_memory(Node_t *head) {
     Node_t *current = head;
     while(current != NULL) {
@@ -101,6 +107,9 @@ int main() {
     print_list(head);
 
     delete_last_node(head);
+    print_list(head);
+
+    head = delete_first_node(head);
     print_list(head);
 
     if(free_memory(head) < 0) {
