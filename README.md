@@ -26,7 +26,7 @@ Data structures implemented in different languages for learning purposes
 ```
 
 ## Doing
-- [Linked List - C](linkedlist/single/C)
+- [Linked List](linkedlist/single)
 
 
 > to be completed...
