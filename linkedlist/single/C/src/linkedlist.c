@@ -47,6 +47,15 @@ Node_t *get_predecessor_of(Node_t *head, int value) {
     return current;
 }
 
+void delete_last_node(Node_t *head) {
+    Node_t *current = head;
+    while(current->next->next != NULL) {
+        current = current->next;
+    }
+    current->next = NULL;
+    free(current->next);
+}
+
 int free_memory(Node_t *head) {
     Node_t *current = head;
     while(current != NULL) {
@@ -56,7 +65,7 @@ int free_memory(Node_t *head) {
     return 0;
 }
 
-void printlist(Node_t *head) {
+void print_list(Node_t *head) {
     Node_t *current = head;
     while(current != NULL) {
         printf("%d -> ", current->value);
@@ -86,7 +95,13 @@ int main() {
     insert(successor, new_node(25));
     insert(get_node(head, 32), new_node(35));
 
-    printlist(head);
+    print_list(head);
+
+    delete_last_node(head);
+    print_list(head);
+
+    delete_last_node(head);
+    print_list(head);
 
     if(free_memory(head) < 0) {
         perror("free malloc");
