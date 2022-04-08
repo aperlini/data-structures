@@ -10,7 +10,7 @@ Data structures implemented in different languages for learning purposes
   - [ ] FIFO
 - [ ] Stack
   - [ ] LIFO
-  - [ ] FILO
+  - [ ] FIFO
 - [ ] Tree
 - [ ] Graph
 
