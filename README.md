@@ -16,14 +16,15 @@ Data structures implemented in different languages for learning purposes
 
 ## Project 
 
-*last update : 07-04-2022*
+*last update : 09-04-2022*
 
 ```bash
 .
 linkedlist
 └── single
     ├── C
-    └── java
+    ├── java
+    └── js
 ```
 
 ## Doing

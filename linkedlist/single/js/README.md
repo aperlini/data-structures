@@ -14,5 +14,5 @@ npm install
 # Run
 
 ```bash
-npx ts-node linkedlist.js
+npx ts-node LinkedList.js
 ```
