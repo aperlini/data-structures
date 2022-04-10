@@ -1,0 +1,15 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "| Software                                                     | Version(s) | | ------------------------------------------------------------ | ---------- | | [Node](https://nodejs.org/en/download/current/)              | 17.6.0     | | [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) | 8.5.1      |",
+  "main": "Queue.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.7.0"
+  }
+}
