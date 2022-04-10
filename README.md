@@ -16,19 +16,23 @@ Data structures implemented in different languages for learning purposes
 
 ## Project 
 
-*last update : 09-04-2022*
+*last update : 10-04-2022*
 
 ```bash
 .
-linkedlist
-└── single
-    ├── C
-    ├── java
+├── linkedlist
+│   └── single
+│       ├── C
+│       ├── java
+│       ├── js
+│       └── python
+└── stack
     └── js
 ```
 
 ## Doing
 - [Linked List](linkedlist/single)
+- [Stack](stack)
 
 
 > to be completed...
