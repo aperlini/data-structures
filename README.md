@@ -4,7 +4,7 @@ Data structures implemented in different languages for learning purposes
 ## Todo list
 
 - [ ] Linked-lists
-  - [ ] simple linked-list
+  - [x] simple linked-list
   - [ ] doubly linked-list
 - [ ] Queue
   - [ ] FIFO
@@ -16,7 +16,7 @@ Data structures implemented in different languages for learning purposes
 
 ## Project 
 
-*last update : 10-04-2022*
+*last update : 11-04-2022*
 
 ```bash
 .
