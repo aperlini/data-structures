@@ -320,9 +320,9 @@ flowchart LR
 | Language   			   | Implemented |
 | ---------- 			   | ----------- |
 | [C](C)     			   |   :ballot_box_with_check:          |
-| [Java](Java)       	   |   :ballot_box_with_check:          |
-| [Python](Python)     	   |   :ballot_box_with_check:          |
-| [Javascript](Javascript) |   :ballot_box_with_check:          |
+| [Java](java)       	   |   :ballot_box_with_check:          |
+| [Python](python)     	   |   :ballot_box_with_check:          |
+| [Javascript](js) |   :ballot_box_with_check:          |
 
 
 
