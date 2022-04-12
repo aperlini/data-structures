@@ -1,4 +1,4 @@
-CC=clang
+CC=gcc
 CFLAGS=-Wall -Wextra -pedantic -g -std=gnu11
 LDFLAGS=-fsanitize=address -fsanitize=leak -fsanitize=undefined 
 SRC=src

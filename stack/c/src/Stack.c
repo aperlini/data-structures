@@ -35,6 +35,7 @@ Node_t *peek(Stack_t *stack) {
 Node_t *pop(Stack_t *stack) {
     Node_t *old_first = stack->first;
     stack->first = old_first->next;
+    stack->n_nodes--;
     return old_first;
 }
 
