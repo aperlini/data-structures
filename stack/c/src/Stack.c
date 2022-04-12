@@ -90,6 +90,7 @@ int main() {
     push(stack, create_node(42));
     push(stack, create_node(24));
     push(stack, create_node(101));
+
     printf(" ---- stack content ---- \n");
     printStack(stack); 
     printf("\n");
