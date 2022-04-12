@@ -5,8 +5,6 @@
 	•	Pop, which removes the most recently added element that was not yet removed.
 The order in which elements come off a stack gives rise to its alternative name, LIFO (last in, first out). Additionally, a peek operation may give access to the top without modifying the stack 
 	
-	[...]
-	
 	A stack is needed to implement depth-first search. [^1]
 
 ## Basic structure 
@@ -34,10 +32,10 @@ to be completed...
 
 | Language   | Implemented |
 | ---------- | ----------- |
-| C          | :ballot_box_with_check:  |
+| [C](C)     | :ballot_box_with_check:  |
 | Java       |             |
 | Python     |             |
-| Javascript | :ballot_box_with_check:  |
+| [Javascript](js) | :ballot_box_with_check:  |
 
 
 

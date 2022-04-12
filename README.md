@@ -16,7 +16,7 @@ Data structures implemented in different C, JAVA, Python and JS for learning pur
 
 ## Project 
 
-*last update : 11-04-2022*
+*last update : 12-04-2022*
 
 ```bash
 .
@@ -27,6 +27,7 @@ Data structures implemented in different C, JAVA, Python and JS for learning pur
 │       ├── js
 │       └── python
 └── stack
+    ├── C
     └── js
 ```
 
