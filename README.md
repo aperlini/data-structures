@@ -1,5 +1,5 @@
 # Data-structures
-Data structures implemented in different C, JAVA, Python and JS for learning purposes
+Data structures implemented in C, JAVA, Python and JS for learning purposes
 
 ## Todo list
 
