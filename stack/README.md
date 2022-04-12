@@ -34,10 +34,10 @@ to be completed...
 
 | Language   | Implemented |
 | ---------- | ----------- |
-| C          |             |
+| C          | :ballot_box_with_check:  |
 | Java       |             |
 | Python     |             |
-| Javascript |             |
+| Javascript | :ballot_box_with_check:  |
 
 
 
