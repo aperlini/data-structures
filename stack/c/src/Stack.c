@@ -61,16 +61,25 @@ void printStack(Stack_t *stack) {
     Node_t *current = stack->first;
     while(current != NULL) {
         printf("%d\n", current->value);
+        printf("|\n");
         printf("v\n");
         current = current->next;
     }
     printf("NULL\n");
 }
 
+void free_stack(Stack_t *stack) {
+    Node_t *current = stack->first;
+    while(current != NULL) {
+        free(current);
+        current = current->next;
+    }
+    free(current);
+    free(stack);
+}
+
 int main() {
-    // Node_t *n = create_node(23);
-    // printf("new node n value is %d\n", n->value);
-    // free(n);
+    
 
     Stack_t *stack = create_stack();
 
@@ -81,7 +90,9 @@ int main() {
     push(stack, create_node(42));
     push(stack, create_node(24));
     push(stack, create_node(101));
-    printStack(stack);
+    printf(" ---- stack content ---- \n");
+    printStack(stack); 
+    printf("\n");
 
     printf("stack nbr elements : %d\n", stack->n_nodes);
 
@@ -90,12 +101,16 @@ int main() {
     Node_t *top_element = peek(stack);
     printf("top element value : %d\n", top_element->value);
 
-    printStack(stack);
     Node_t *top = pop(stack);
-    printf("top element to be popped : %d\n", top->value);
+    printf("top element to be deleted : %d\n", top->value);
     free(top);
 
+    printf(" ---- stack content ---- \n");
     printStack(stack);
+    printf("\n");
 
+    printf("stack nbr elements : %d\n", stack->n_nodes);
+
+    free_stack(stack);   
     printf("stack implementation  \n");
 }
