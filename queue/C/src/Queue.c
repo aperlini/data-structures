@@ -92,6 +92,15 @@ void printQueue(Queue_t *q) {
     printf("NULL\n");
 }
 
+void free_queue(Queue_t *q) {
+    Node_t *current = q->first;
+    while(current != NULL) {
+        free(current);
+        current = current->next;
+    }
+    free(q);
+}
+
 /**
  * Create node
  */
@@ -140,14 +149,21 @@ int main() {
 
     old_first = dequeue(q);
     printf("%d dequeued from queue\n", old_first->value);
+    free(old_first);
+
     old_first = dequeue(q);
     printf("%d dequeued from queue\n", old_first->value);
+    free(old_first);
+
     old_first = dequeue(q);
     printf("%d dequeued from queue\n", old_first->value);
+    free(old_first);
 
     printf("size of queue : %d\n", size(q));
 
     printQueue(q);
+
+    free_queue(q);
 
     printf("queue implementation  \n");
 }
