@@ -16,7 +16,7 @@ Data structures implemented in C, JAVA, Python and JS for learning purposes
 
 ## Project 
 
-*last update : 12-04-2022*
+*last update : 13-04-2022*
 
 ```bash
 .
@@ -26,6 +26,9 @@ Data structures implemented in C, JAVA, Python and JS for learning purposes
 │       ├── java
 │       ├── js
 │       └── python
+├── queue
+│   ├── C
+│   └── js
 └── stack
     ├── C
     └── js
@@ -33,6 +36,7 @@ Data structures implemented in C, JAVA, Python and JS for learning purposes
 
 ## Doing
 - [Linked List](linkedlist/single)
+- [Queue](queue)
 - [Stack](stack)
 
 
