@@ -1,19 +1,27 @@
 class Queue {
 
-    /**
-     * to be implementated : 
-     * 
-     * enqueue(item)
-     * dequeue()
-     * peek()
-     * front()
-     * isEmpty()
-     * printQueue()
-     * 
-     */
-
     constructor() {
         this.items = [];
+    }
+
+    enqueue(item) {
+        this.items.push(item)
+    }
+
+    dequeue() {
+        return this.items.shift();
+    }
+
+    front() {
+        return this.items[0];
+    }
+
+    isEmpty() {
+        return this.items.length == 0;
+    }
+
+    printQueue() {
+        console.log(this.items.join(' -> '));
     }
 
     print(o) {
@@ -26,5 +34,22 @@ class Queue {
 
 }
 
-let q = new Queue()
-q.print(q.size())
+let q = new Queue();
+q.print(q.isEmpty());
+q.enqueue(23);
+q.enqueue(32);
+q.enqueue(42);
+q.enqueue(24);
+
+q.print(q.front());
+
+q.printQueue();
+let d = q.dequeue();
+q.print("dequeued item : " + d);
+
+d = q.dequeue();
+q.print("dequeued item : " + d);
+
+q.printQueue();
+
+q.print(q.isEmpty());
