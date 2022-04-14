@@ -22,7 +22,7 @@ to be completed...
 | [C](c)     | :ballot_box_with_check:  |
 | Java       |             |
 | Python     |             |
-| Javascript | :ballot_box_with_check:  |
+| [Javascript](js) | :ballot_box_with_check:  |
 
 
 
